@@ -38,8 +38,8 @@
 
 # ----------------------------------------------------
 
-texto = 'ABC'
-numero462 = 7574.756382123
+# texto = 'ABC'
+# numero462 = 7574.756382123
 
 # print(f'{texto}.')
 # print(f'{texto: >10}.')
@@ -47,7 +47,34 @@ numero462 = 7574.756382123
 # print(f'{texto: ^10}.')
 # print(f'{texto:_<10}.')
 
-print(f'{numero:0=+20,.1f}')
+# print(f'{numero:0=+20,.1f}')
 
-numero = int(numero)
-print(f'O hexadecimal de {numero} é {numero:06x}')
+# numero = int(numero)
+# print(f'O hexadecimal de {numero} é {numero:06x}')
+
+# ---------------------------------------------------
+
+# Fatiamento de strings
+
+# texto = 'Olá, mundo!'
+
+# print(texto[0:11:2])
+# print(texto[::-1])
+# ----------------------------------------
+
+nome = input('Digite seu nome: ')
+letras_nome = 0
+
+if nome:
+
+    for letra in nome:
+        letras_nome += 0 if letra==' ' else 1
+
+    print(f'Seu nome é {nome}')
+    print(f'Seu nome invertido é {nome[::-1]}')
+    print(f'Seu nome{' ' if ' ' in nome else ' não '}contém{f' {len(nome)-letras_nome} ' if ' ' in nome else ' '}espaços')
+    print(f'Seu nome tem {letras_nome} letras')
+    print(f'A primeira letra do seu nome é {nome[0]}')
+    print(f'A última letra do seu nome é {nome[-1]}')
+else:
+    print('Seu nome não pode ser um campo vazio.')
