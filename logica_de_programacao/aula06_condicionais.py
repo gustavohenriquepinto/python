@@ -40,3 +40,27 @@
 #     print(f'{segundo_valor=} é maior do que {primeiro_valor=}.')
 
 # print(f'{primeiro_valor=} é maior do que {segundo_valor=}.' if primeiro_valor > segundo_valor else f'{primeiro_valor=} é igual a {segundo_valor=}.' if primeiro_valor == segundo_valor else f'{segundo_valor=} é maior do que {primeiro_valor=}.')
+
+# print(not True)
+# print(not False)
+# print(10* '-')
+
+# print(True and True)
+# print(True and False)
+# print(False and True)
+# print(False and False)
+# print(10* '-')
+
+# print(True or True)
+# print(True or False)
+# print(False or True)
+# print(False or False)
+# print(10* '-')
+
+# print('a' in 'abc')
+# print('abc' in 'a')
+# print(10* '-')
+
+# print('a' not in 'abc')
+# print('abc' not in 'a')
+# print(10* '-')
