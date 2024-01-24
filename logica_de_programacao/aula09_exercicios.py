@@ -33,10 +33,8 @@ def nome_valido(texto) -> bool:
     if texto == '':
         return False
     
-    alfabeto : str = 'AaãáâàBbCcçDdEeêéFfGgHhIiíJjKkLlMmNnOoôõóPpQqRrSsTtUuúVvWwXxYyZz '
-
     for caractere in texto:
-        if caractere not in alfabeto:
+        if caractere not in 'AaãáâàBbCcçDdEeêéFfGgHhIiíJjKkLlMmNnOoôõóPpQqRrSsTtUuúVvWwXxYyZz ':
             return False
 
     return True

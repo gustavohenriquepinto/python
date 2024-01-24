@@ -48,34 +48,52 @@
 # else:
 #     print('Seu nome pode conter apenas letras, e não deve estar em branco.')
 
-while True:
-    numero1 : float = 0
-    numero2 : float = 0
-    operacao : str = ''
+# while True:
+#     numero1 : float = 0
+#     numero2 : float = 0
+#     operacao : str = ''
 
-    try:
-        numero1 = float(input('Digite o primeiro número: '))
-        numero2 = float(input('Digite o segundo número: '))
-    except:
-        print('\nVocê digitou um número inválido.\n')
-        continue
+#     try:
+#         numero1 = float(input('Digite o primeiro número: '))
+#         numero2 = float(input('Digite o segundo número: '))
+#     except:
+#         print('\nVocê digitou um número inválido.\n')
+#         continue
 
-    operacao = input('Digite a operação (+-*/): ')
-    if operacao not in '+-*/' or len(operacao) > 1:
-        print('\nVocê digitou uma operação inválida.\n')
-        continue
+#     operacao = input('Digite a operação (+-*/): ')
+#     if operacao not in '+-*/' or len(operacao) > 1:
+#         print('\nVocê digitou uma operação inválida.\n')
+#         continue
 
-    print('O resultado da operação é:', end=' ')
-    if operacao == '+':
-        print(numero1 + numero2)
-    elif operacao == '-':
-        print(numero1 - numero2)
-    elif operacao == '*':
-        print(numero1 * numero2)
-    elif operacao == '/':
-        print(numero1 / numero2)
-    else:
-        print('Um erro inesperado.')
+#     print('O resultado da operação é:', end=' ')
+#     if operacao == '+':
+#         print(numero1 + numero2)
+#     elif operacao == '-':
+#         print(numero1 - numero2)
+#     elif operacao == '*':
+#         print(numero1 * numero2)
+#     elif operacao == '/':
+#         print(numero1 / numero2)
+#     else:
+#         print('Um erro inesperado.')
     
-    if input('Digite [S] para sair: ').lower().startswith('s'):
-        break
+#     if input('Digite [S] para sair: ').lower().startswith('s'):
+#         break
+
+# frase : str = input('Digite uma frase: ')
+
+# i = 0
+# letra_mais_usada = ''
+# int_letra_mais_usada = 0
+
+# while i < len(frase):
+#     if int_letra_mais_usada < frase.count(frase[i]) and frase[i] != ' ':
+#         letra_mais_usada = frase[i]
+#         int_letra_mais_usada = frase.count(frase[i])
+
+#     if int_letra_mais_usada + i > len(frase) - 1:
+#         break
+    
+#     i += 1
+
+# print(f'A letra mais comum no texto é "{letra_mais_usada}", que aparece {int_letra_mais_usada} vezes.')
