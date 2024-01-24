@@ -29,23 +29,11 @@
 
 nome : str = input('Digite seu nome: ')
 
-def nome_valido(texto : str) -> bool:
-
-    caracteres_perimitidos : str = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz'
-    
-    for letra in caracteres_perimitidos:
-        if letra in texto:
-            texto.replace(letra, '', 1)
-            print('Ok')
-    
-    print(texto)
-    return True if texto == '' else False
-
-if len(nome) > 1 and not nome.isdigit():
+if nome.isalpha():
     if len(nome) <= 4:
         print('Seu nome é curto.')
     elif len(nome) <= 6:
-        print('Seu nome é curto.')
+        print('Seu nome é médio.')
     else:
         print('Seu nome é longo')
 else:
