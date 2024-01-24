@@ -29,7 +29,19 @@
 
 nome : str = input('Digite seu nome: ')
 
-if nome.isalpha():
+def nome_valido(texto) -> bool:
+    if texto == '':
+        return False
+    
+    alfabeto : str = 'AaãáâàBbCcçDdEeêéFfGgHhIiíJjKkLlMmNnOoôõóPpQqRrSsTtUuúVvWwXxYyZz '
+
+    for caractere in texto:
+        if caractere not in alfabeto:
+            return False
+
+    return True
+
+if nome_valido(nome):
     if len(nome) <= 4:
         print('Seu nome é curto.')
     elif len(nome) <= 6:
