@@ -97,3 +97,15 @@
 #     i += 1
 
 # print(f'A letra mais comum no texto é "{letra_mais_usada}", que aparece {int_letra_mais_usada} vezes.')
+
+# texto = 'Maria'
+
+# for caractere in texto:
+#     print(caractere)
+
+numeros = range(10)
+numeros = range(5, 10)
+numeros = range(15, 3, -1)
+
+for numero in numeros:
+    print(numero)
