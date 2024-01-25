@@ -103,9 +103,9 @@
 # for caractere in texto:
 #     print(caractere)
 
-numeros = range(10)
-numeros = range(5, 10)
-numeros = range(15, 3, -1)
+# numeros = range(10)
+# numeros = range(5, 10)
+# numeros = range(15, 3, -1)
 
-for numero in numeros:
-    print(numero)
+# for numero in numeros:
+#     print(numero)
