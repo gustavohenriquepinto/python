@@ -1,34 +1,18 @@
-SENHA : str = 'Tesoura'.lower()
-senha_formatada : str = ''
-letra_digitada : str = ''
-
-for caractere in SENHA:
-    senha_formatada += '*'
-
-
-def atualizar_senha_formatada(letra):
-    i = 0
-    while i < len(SENHA):
-        if SENHA[i] == letra:
-            senha_formatada[i] = letra
-            i += 1
+senha = 'perfume'
+letras_acertadas = ''
 
 while True:
-    letra_digitada = input('Digite uma letra: ').lower()
+    letra_digitada = input('Digite uma letra: ')
 
-    if letra_digitada.isalpha() and len(letra_digitada) == 1:
-        
-        if letra_digitada in SENHA:
-            atualizar_senha_formatada(letra_digitada)
-            print('Senha atual:', senha_formatada)
-        else:
-            print('Senha atual:', senha_formatada)
-    else:
-        print('Digite apenas uma letra...\n')
+    if len(letra_digitada) > 1:
+        print('Digite apenas uma letra.')
         continue
 
-    if SENHA == senha_formatada:
-        break
+    if letra_digitada in senha:
+        letras_acertadas += letra_digitada
 
-print('Você encontrou a senha!')
-    
+    print('Senha: ', end='')
+    for letra in senha:
+        print(f'{letra if letra in letras_acertadas else '*'}', end='')
+    print('')
+
