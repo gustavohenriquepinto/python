@@ -33,8 +33,73 @@
 #         print(letra, end='_')
 #     print('')
 
-lista_nomes = ['Maria', 'Helena', 'Luiz']
-indices = range(len(lista_nomes))
+# lista_nomes = ['Maria', 'Helena', 'Luiz']
+# indices = range(len(lista_nomes))
 
-for indice in indices:
-    print(indice, lista_nomes[indice])
+# for indice in indices:
+#     print(indice, lista_nomes[indice])
+
+# _, nome2, *_ = ['Maria', 'Gustavo', 'Henrique']
+
+# nomes = 'Gustavo', 'Henrique', 'Maria'
+# nomes = tuple(['Maria', 'Gustavo', 'Henrique'])
+
+# print(nomes)
+
+# lista = ['Gustavo', 'Henrique', 'Silva']
+# lista.append('João')
+
+# for indice, nome in enumerate(lista):
+#     print(indice, nome)
+
+# print(list(enumerate(lista)))
+
+infinito = True
+lista = []
+
+while infinito:
+    print('Selecione uma opção: ')
+    acao = input('[i]nserir, [a]pagar, [l]istar, [e]ncerrar: ')[0].lower()
+
+    match acao:
+        case 'e':
+            infinito = False
+
+        case 'i':
+            novo_item = input('Digite o item a ser inserido na lista: ')
+
+            if not novo_item.isdigit:
+                print('Seeu item não pode ser um número!\n')
+            else:
+                lista.append(novo_item)
+
+        case 'a':
+            if len(lista) == 0:
+                print('Sua lista não contém nenhum item para apagar!\n')
+                continue
+
+            for indice, nome in enumerate(lista):
+                print(indice, nome)
+            
+            item_para_apagar = input(f'\nDigite o índice do item a ser apagado na lista, um número de 0 a {len(lista) - 1}: ')
+
+            if item_para_apagar.isdigit():
+                if int(item_para_apagar) >= 0 and int(item_para_apagar) <= len(lista) - 1:
+                    del lista[int(item_para_apagar)]
+                else:
+                    print('Este não é um índice da lista!\n')
+            else:
+                print('Você precisa digitar um número!\n')
+
+        case 'l':
+            if len(lista) == 0:
+                print('Sua lista não contém nenhum item para listar!\n')
+                continue
+
+            for indice, nome in enumerate(lista):
+                print(indice, nome)
+            print('')
+
+        case _:
+            print('Você digitou uma ação inválida!\n')
+            
