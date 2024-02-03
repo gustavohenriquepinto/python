@@ -1,14 +1,14 @@
-print('\nBem-vindo à calculadora de Fibonacci.')
+# print('\nBem-vindo à calculadora de Fibonacci.')
 
-fibonacci = []
+# fibonacci = []
 
-try:
-    quantidade = int(input('Quantos números da sequência de fibonacci deseja obter?'))
-except:
-    print('Digite um número natural não nulo.')
+# try:
+#     quantidade = range(int(input('Quantos números da sequência de fibonacci deseja obter? ')))
+# except:
+#     print('Digite um número natural não nulo.')
 
-for indice in quantidade:
-    fibonacci.insert(indice - 1, 1 if indice <= 2 else fibonacci[indice - 1] + fibonacci[indice - 2])
+# for indice in quantidade:
+#     fibonacci.append(1 if indice <= 1 else fibonacci[indice - 1] + fibonacci[indice - 2])
 
-print('Sequência: ', fibonacci)    
+# print('Sequência: ', fibonacci)    
 

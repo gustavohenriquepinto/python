@@ -54,52 +54,52 @@
 
 # print(list(enumerate(lista)))
 
-infinito = True
-lista = []
 
-while infinito:
-    print('Selecione uma opção: ')
-    acao = input('[i]nserir, [a]pagar, [l]istar, [e]ncerrar: ')[0].lower()
+# lista = []
 
-    match acao:
-        case 'e':
-            infinito = False
+# while True:
+#     print('Selecione uma opção: ')
+#     acao = input('[i]nserir, [a]pagar, [l]istar, [e]ncerrar: ')[0].lower()
 
-        case 'i':
-            novo_item = input('Digite o item a ser inserido na lista: ')
+#     match acao:
+#         case 'e':
+#             break
 
-            if not novo_item.isdigit:
-                print('Seeu item não pode ser um número!\n')
-            else:
-                lista.append(novo_item)
+#         case 'i':
+#             novo_item = input('Digite o item a ser inserido na lista: ')
 
-        case 'a':
-            if len(lista) == 0:
-                print('Sua lista não contém nenhum item para apagar!\n')
-                continue
+#             if not novo_item.isdigit:
+#                 print('Seeu item não pode ser um número!\n')
+#             else:
+#                 lista.append(novo_item)
 
-            for indice, nome in enumerate(lista):
-                print(indice, nome)
+#         case 'a':
+#             if len(lista) == 0:
+#                 print('Sua lista não contém nenhum item para apagar!\n')
+#                 continue
+
+#             for indice, nome in enumerate(lista):
+#                 print(indice, nome)
             
-            item_para_apagar = input(f'\nDigite o índice do item a ser apagado na lista, um número de 0 a {len(lista) - 1}: ')
+#             item_para_apagar = input(f'\nDigite o índice do item a ser apagado na lista, um número de 0 a {len(lista) - 1}: ')
 
-            if item_para_apagar.isdigit():
-                if int(item_para_apagar) >= 0 and int(item_para_apagar) <= len(lista) - 1:
-                    del lista[int(item_para_apagar)]
-                else:
-                    print('Este não é um índice da lista!\n')
-            else:
-                print('Você precisa digitar um número!\n')
+#             if item_para_apagar.isdigit():
+#                 if int(item_para_apagar) >= 0 and int(item_para_apagar) <= len(lista) - 1:
+#                     del lista[int(item_para_apagar)]
+#                 else:
+#                     print('Este não é um índice da lista!\n')
+#             else:
+#                 print('Você precisa digitar um número!\n')
 
-        case 'l':
-            if len(lista) == 0:
-                print('Sua lista não contém nenhum item para listar!\n')
-                continue
+#         case 'l':
+#             if len(lista) == 0:
+#                 print('Sua lista não contém nenhum item para listar!\n')
+#                 continue
 
-            for indice, nome in enumerate(lista):
-                print(indice, nome)
-            print('')
+#             for indice, nome in enumerate(lista):
+#                 print(indice, nome)
+#             print('')
 
-        case _:
-            print('Você digitou uma ação inválida!\n')
-            
+#         case _:
+#             print('Você digitou uma ação inválida!\n')
+
