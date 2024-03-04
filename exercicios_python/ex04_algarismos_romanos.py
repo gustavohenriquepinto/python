@@ -57,6 +57,8 @@ def IndoarabicosParaRomanos(numero : int) -> str:
 
 def RomanosParaIndoarabicos(numero : str) -> int:
     ...
+
+    
 while True:
     texto_usuario = input('\nDigite o número para converter ou S para sair: ').upper()
 
