@@ -27,20 +27,52 @@
 
 # somar(1,2)
 
-x = 'Olá, mundo!'
+# x = 'Olá, mundo!'
 
-def escopo():
-    global x
-    x = 4
-    def funcao_interna():
-        y = 7
-        print(x + y)
+# def escopo():
+#     global x
+#     x = 4
+#     def funcao_interna():
+#         y = 7
+#         print(x + y)
 
     
-    print(x)
+#     print(x)
     
-    funcao_interna()
+#     funcao_interna()
 
-print(x)
-escopo()
-print(x)
+# print(x)
+# escopo()
+# print(x)
+
+# def soma(*numeros):
+#     total = 0
+#     for numero in numeros:
+#         total += numero
+    
+#     return total
+
+# print(soma(3, -4, 5, -20, 64))
+
+# def criar_saudacao(saudacao, nome):
+#     def saudar():
+#         return f'{saudacao}, {nome}!'
+#     return saudar
+
+# nova_saudacao = criar_saudacao('Bom dia', 'Gustavo')
+
+# print(nova_saudacao())
+
+# def multiplicar(fator):
+#     def calcular(numero):
+#         return numero * fator
+    
+#     return calcular
+
+# duplicar = multiplicar(2)
+# triplicar = multiplicar(3)
+# quadruplicar = multiplicar(4)
+
+# print(duplicar(3))
+# print(triplicar(-1))
+# print(quadruplicar(4.5))
